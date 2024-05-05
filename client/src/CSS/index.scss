@@ -1,0 +1,3396 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure wrapper fills the viewport */
+}
+
+
+main {
+    margin-bottom: 8rem;
+    flex: 1;
+
+}
+
+// ==================================================================================
+// Header
+// ==================================================================================
+header {
+    position: sticky;
+    top: 0;
+    left: 0%;
+    z-index: 100000000000;
+}
+
+.main_navbar {
+    background: rgb(240, 232, 232);
+    height: 6.6rem;
+
+
+    .nav_brand {
+        font-size: 2.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline;
+        background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%);
+        padding: 0%;
+        border: .2rem solid rgba(255, 0, 0, 0.5);
+
+    }
+
+    .toggle_btn {
+        font-size: 3rem;
+        border: none;
+    }
+
+    .offcanvas-header {
+        border-bottom: .2rem solid;
+
+        .offcanvas-title {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+
+        li {
+            a {
+                font-size: 2rem;
+                text-decoration: none;
+                color: rgb(15, 15, 69);
+                font-weight: 500;
+
+                &.active {
+                    color: blue;
+                    display: inline;
+                    border-bottom: .2rem solid;
+                }
+            }
+
+        }
+
+        li:last-child {
+            position: relative;
+            width: 2.5rem;
+
+            a {
+                font-size: 3rem;
+                font-weight: 500;
+                border-bottom: none;
+
+                span {
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    background: rgba(187, 4, 4, 0.5);
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    padding: .1rem .3rem;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: -2rem;
+                    top: .2rem;
+                    display: grid;
+                    place-items: center;
+                    font-weight: 900;
+
+                }
+
+                &.active {
+                    color: blue;
+                    display: inline-block;
+                    border-bottom: none;
+                }
+
+            }
+        }
+
+    }
+}
+
+// ==============================================================================
+// ----------------------------------Home Page----------------------------------
+// ==============================================================================
+
+.hero_section {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40rem;
+    padding: 4rem 0;
+
+    .hero_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        .hero_small_Heading {
+            font-size: 1.8rem;
+            color: blue;
+            text-transform: capitalize;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+        }
+
+        .hero_para {
+            font-size: 1.7rem;
+            text-align: justify;
+        }
+
+        .hero_btn {
+            font-size: 1.7rem;
+        }
+    }
+
+    .hero_image {
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        .hero_img_bg {
+            background: blue;
+            width: 35rem;
+            height: 35rem;
+            clip-path: polygon(50% 0%, 0% 100%, 0 100%, 0 10%, 87% 10%, 87% 100%, 0 100%, 0 100%, 100% 50%, 100% 0%);
+            position: absolute;
+            top: 0;
+            z-index: 1;
+        }
+
+        img {
+            height: 42rem;
+            width: 40rem;
+            z-index: 2;
+        }
+    }
+
+}
+
+// ==================================================================================
+// Feature Services Component
+// ==================================================================================
+
+.FeatureProducts_section {
+    padding: 4rem 0;
+    // padding-bottom: 4rem;
+    background: rgb(240, 232, 232);
+
+    .feature_smallHeading {
+        font-size: 1.5rem;
+        color: blue;
+        text-transform: capitalize;
+    }
+
+    .feature_mainHeading {
+        font-size: 3rem;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    .FeatureProducts_row {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+        row-gap: 4rem;
+        padding-left: .7rem;
+        padding-right: .7rem;
+
+
+    }
+
+
+}
+
+// =============================================================================
+// Product Card Component
+// =============================================================================
+.FeatureProducts_col {
+    width: 27rem;
+    padding: 0;
+    text-decoration: none;
+
+    .card {
+        width: 27rem;
+        border: none;
+        margin: 0;
+
+        figure {
+            position: relative;
+            overflow: hidden;
+            height: 15rem;
+            width: 27rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+
+            }
+
+            figcaption {
+
+                text-transform: capitalize;
+                position: absolute;
+                top: 1rem;
+                right: 2rem;
+                width: auto;
+                background: white;
+                font-size: 1.5rem;
+                padding: .5rem 1rem;
+                margin-left: auto;
+                border-radius: 5rem;
+
+                &:hover {
+                    color: white;
+                    background: blue;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                transition: left 0.3s ease;
+            }
+
+            &:hover::before {
+                left: 0;
+            }
+
+        }
+
+
+
+        .card-body {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-size: 1.8rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+}
+
+// ==================================================================================
+// Services Component
+// ==================================================================================
+
+.Services_section {
+    background: white;
+    padding: 4rem 0;
+
+    .Services_row {
+
+        .Services_cards {
+
+            .card {
+                border: none;
+                background: rgb(240, 232, 232);
+                height: 18rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+
+                .card-img {
+                    font-size: 3rem;
+                    color: blue;
+                    text-align: center;
+                    padding: 1rem;
+                    background: white;
+                    border-radius: 50%;
+                    width: auto;
+                    display: grid;
+                    place-items: center;
+                }
+
+                .card_content {
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+
+            }
+        }
+
+        .Services_cards_2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .Services_cards_row {
+                height: 45%;
+
+                .card {
+                    height: 98%;
+                    border: none;
+                    background: rgb(240, 232, 232);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 1rem 2rem;
+
+                }
+
+                .card-img {
+                    font-size: 3rem;
+                    color: blue;
+                    padding: 1rem;
+                    background: white;
+                    border-radius: 50%;
+                    width: 5rem;
+                    margin-right: 2rem;
+                    display: grid;
+                    place-items: center;
+                }
+
+                .card_content {
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ==================================================================================
+// Trusted Component
+// ==================================================================================
+.Trusted_section {
+    background: rgb(240, 232, 232);
+    padding: 4rem 0;
+
+    h3 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: gray;
+    }
+
+    .trusted_row {
+        padding-top: 4rem;
+
+        .trusted_col {
+            .swiper {
+                padding-bottom: 5rem;
+                display: flex;
+                justify-content: space-between;
+
+                .swiper-slide {
+                    .slider_img {
+                        width: 15rem;
+                        height: 10rem;
+                        // border: 2px solid;
+
+                        img {
+                            // border: 2px solid blue;
+                            width: 100%;
+                            height: 100%;
+                            cursor: pointer;
+                            object-fit: cover;
+                        }
+                    }
+
+                }
+
+            }
+
+
+        }
+    }
+}
+
+// ==================================================================================
+//  ----------------------------------Contact Page----------------------------------
+// ==================================================================================
+.contact_section {
+    padding-top: 4rem;
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 4rem;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 40rem;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    .form_row {
+        padding: 4rem 0;
+        display: flex;
+        justify-content: center;
+
+        .form_col {
+            max-width: 50rem;
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    font-size: 2rem;
+                    height: auto;
+                    margin-bottom: 3rem;
+
+                }
+
+                textarea {
+                    font-size: 2rem;
+                    margin-bottom: 3rem;
+
+                }
+
+            }
+        }
+    }
+}
+
+// ==================================================================================
+//  ----------------------------------Footer----------------------------------
+// ==================================================================================
+
+
+
+.footercom {
+    margin-top: auto;
+    width: 100%;
+    padding: 0 0 1rem 0;
+    background: rgb(2, 2, 41);
+
+    .footer_1 {
+        width: 100rem;
+        position: relative;
+        top: -4rem;
+        margin: auto;
+
+        .footer_1_row {
+            background: rgb(240, 232, 232);
+            display: flex;
+            align-items: center;
+            padding: 2rem 1rem;
+            border-radius: 1rem;
+
+            .footer_1_col {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .footer_1_content {
+                    h3 {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+
+                .footer_1_btn {
+                    a {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .main_footer {
+        padding-bottom: 2rem;
+        width: 100%;
+
+
+        .main_footer_row {
+            padding: 0 .7rem;
+            display: flex;
+            justify-content: space-between;
+            row-gap: 3rem;
+
+
+            .main_footer_col_1 {
+
+                h3 {
+                    color: white;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+
+                }
+
+                p {
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 100;
+
+                }
+            }
+
+            .main_footer_col_2 {
+                h3 {
+                    color: white;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 20rem;
+
+                    input {
+                        margin-bottom: 1rem;
+                        margin-top: 1rem;
+                        font-size: 1.2rem;
+                        padding: 0 0.5rem;
+                    }
+
+                    button {
+                        font-size: 1.2rem;
+                    }
+                }
+
+            }
+
+            .main_footer_col_3 {
+                width: auto;
+                margin: 0;
+                padding: 0;
+
+                h3 {
+                    color: white;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
+                .social_icon {
+                    width: 12rem;
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        font-size: 2rem;
+                        color: white;
+                    }
+                }
+
+            }
+
+            .main_footer_col_4 {
+                justify-self: flex-end;
+                width: auto;
+
+                h3 {
+                    width: auto;
+                    color: white;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
+                .footer_call {
+                    a {
+                        color: white;
+                        font-size: 1.2rem;
+                        text-decoration: none;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    .footer_bottom {
+        padding-top: 1rem;
+        width: 100%;
+
+        .footer_bottom_row {
+            padding: 0 .7rem;
+            display: grid;
+            place-items: center;
+
+
+            .footer_bottom_col {
+                // width: 88rem;
+                display: flex;
+                justify-content: space-between;
+
+
+                p {
+                    color: white;
+                    font-size: 1rem;
+                }
+
+            }
+        }
+    }
+}
+
+// ==========================Error Page-========================
+
+.Error_section {
+
+    .err_content {
+        // width: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .err_404 {
+            font-size: 15rem;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .para {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .button {
+            padding-top: 2rem;
+
+            .btn1 {
+                font-size: 1.8rem;
+                margin-right: 2rem;
+            }
+
+            .btn2 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+// =======================SingleProduct Page=============================
+
+.singleProduct_section {
+    .mainHeading_div {
+        padding: 2rem 0;
+        background: rgb(240, 232, 232);
+
+
+        .Main_Heading {
+            font-size: 2.5rem;
+            text-transform: capitalize;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    .single_Product_row {
+        padding: 4rem 0;
+        display: flex;
+        align-items: center;
+        row-gap: 3rem;
+
+        // =================== Image Portion ====================================
+
+        .single_Product_ImagePortion {
+            .single_product_image_row {
+
+                .single_product_image_small {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1rem;
+
+                    div {
+                        width: 12rem;
+                        height: 7rem;
+                        cursor: pointer;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            // object-fit: cover;
+
+
+                        }
+                    }
+                }
+
+                .single_product_image_large {
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        width: 30rem;
+                        height: 30rem;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            // object-fit: contain;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        // =================== Content Portion ====================================
+        .single_Product_content {
+
+            h3 {
+                font-weight: 600;
+                font-size: 3rem;
+                text-transform: capitalize;
+            }
+
+            .customer_review {
+                display: flex;
+                align-items: center;
+
+                .star_review {
+                    margin-right: 2rem;
+                    font-size: 1.8rem;
+                    color: orange;
+                    font-weight: 900;
+                }
+
+                .numb_reviews {
+                    font-size: 1.5rem;
+                    color: gray;
+                }
+            }
+
+            .previous_price {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+            .current_price {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: blue;
+
+            }
+
+            .single_description {
+                font-size: 1.8rem;
+                text-align: justify;
+                color: gray;
+            }
+
+            .company_services {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: .2rem solid gray;
+
+                .services {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 2rem;
+
+                    .service_img {
+                        padding: 0.6rem .6rem;
+                        background: rgb(240, 232, 232);
+                        border-radius: 5rem;
+                        font-size: 1.7rem;
+                        display: grid;
+                        place-items: center;
+                    }
+
+                    p {
+                        padding-top: 1rem;
+                        color: gray;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .single_para {
+                font-size: 1.2rem;
+                color: gray;
+            }
+
+            hr {
+                width: 90%;
+                height: .1rem solid red;
+            }
+
+            // ==================== Color Section =======================================
+            .color_section {
+                font-size: 1.5rem;
+                display: flex;
+                column-gap: 1rem;
+
+                button {
+                    border-radius: 50%;
+                    width: 2rem;
+                    height: 2rem;
+                    border: none;
+                    display: grid;
+                    place-items: center;
+
+                }
+            }
+
+            // ==================== Button Cart Section =======================================
+            .cart_btn {
+                font-size: 1.8rem;
+                padding-top: 2rem;
+
+                .toggle_quantity {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 10rem;
+
+                    button {
+                        background: none;
+                        border: none;
+                    }
+
+                    .cart_quantity {
+                        font-weight: 600;
+                    }
+                }
+
+                a {
+                    margin-top: 1rem;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+
+    }
+
+
+}
+
+// ==================================================================================
+//  ----------------------------------Product Page-------------------------------------
+// ==================================================================================
+.products_section {
+    padding: 4rem 0;
+}
+
+// =======================Product_List===========================================
+.Product_List_Row {
+    padding-bottom: 4rem;
+
+    .Product_List_col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .product_List_btn {
+            display: flex;
+
+            button {
+                font-size: 2rem;
+                font-weight: 600;
+                display: grid;
+                place-items: center;
+            }
+
+        }
+
+        .product_length {
+            font-size: 1.5rem;
+            color: gray;
+        }
+
+        .sort_selection {
+
+            // form {
+            .input-group {
+                width: auto;
+                font-size: 1.5rem;
+
+                select {
+                    width: auto;
+                    font-size: 1.5rem;
+                    padding: .2rem 2rem;
+                }
+            }
+
+            // }
+        }
+
+    }
+}
+
+.Product_Show {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    row-gap: 2rem;
+    column-gap: 1.5rem;
+}
+
+// ==================================================================================
+//  --------------------------------List View Section--------------------------------
+// ==================================================================================
+
+.listView_section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    .listView_row {
+        border: .1rem solid rgb(240, 232, 232);
+
+        padding: 2rem 4rem;
+
+        .listView_images {
+
+            display: grid;
+            place-items: center;
+
+            .view_img {
+                width: 25rem;
+                height: 15rem;
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    transition: left 0.3s ease;
+                }
+
+                &:hover::before {
+                    left: 0;
+                }
+
+            }
+
+        }
+
+        .listView_content {
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            .listView_price {
+                padding-top: 1rem;
+                font-size: 1.2rem;
+                color: gray;
+                font-weight: 600;
+            }
+
+            .listView_description {
+                font-size: 1.4rem;
+            }
+
+            button {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+// ==================================================================================
+//  ---------------------------Product Filter Section--------------------------------
+// ==================================================================================
+
+.product_Filter_Section {
+
+    .Product_search {
+
+        form {
+            input {
+                font-size: 1.5rem;
+                padding: .2rem 1rem;
+            }
+        }
+    }
+}
+
+// ==================================================================================
+//  ---------------------------Product Category Section--------------------------------
+// ==================================================================================
+.product_category_section {
+    padding-top: 3rem;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .category_btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        button {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            margin-left: 2rem;
+            border: none;
+
+        }
+    }
+
+}
+
+// ==================================================================================
+//  ---------------------------Product Company Section--------------------------------
+// ==================================================================================
+
+.Product_Company_Section {
+    padding-top: 1rem;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    form {
+        .company_selection {
+            width: 20rem;
+
+            select {
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                // border-radius: none;
+                padding: .2rem 2rem;
+            }
+
+        }
+
+    }
+}
+
+// ==================================================================================
+//  ---------------------------Product Color Section--------------------------------
+// ==================================================================================
+.Product_Color_Section {
+    padding-top: 2rem;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .btn_color {
+        display: flex;
+        column-gap: 1rem;
+
+        button {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5rem;
+            display: grid;
+            place-items: center;
+        }
+    }
+
+
+}
+
+// ==================================================================================
+//  ------------------------Product Price Range Section--------------------------------
+// ==================================================================================
+.Product_Price_Range_Section {
+    padding-top: 2rem;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    input {
+        width: 80%;
+        color: blue;
+        background-color: blue;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+}
+
+// ==================================================================================
+//  ------------------------Clear Filter Section--------------------------------
+// ==================================================================================
+.Clear_Filter_Section {
+    padding-top: 2rem;
+
+    button {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+}
+
+// ================================================================================
+//  ----------------Cart Section--------------------------------
+// ============================================================================
+.cart_section {
+    padding-top: 4rem;
+
+    .cart_row {
+        .cart_col_content {
+
+            padding-bottom: 2rem;
+
+            table {
+
+                thead {
+
+                    // padding-bottom: 4rem;
+                    tr {
+
+                        border-bottom: .1rem solid gray;
+
+                        th {
+                            font-size: 1.8rem;
+                            padding: 1.5rem 0;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            padding: 1rem 0;
+                            text-transform: capitalize;
+                        }
+
+                        .cart_title {
+                            display: flex;
+                            // justify-content: center;
+                            align-items: center;
+
+                            .cart_img {
+                                width: 4rem;
+                                height: 4rem;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            .cart_img_content {
+                                padding-left: 1rem;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                p {
+                                    font-size: 1.8rem;
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0;
+
+                                    button {
+                                        width: 1.8rem;
+                                        height: 1.8rem;
+                                        border-radius: 50%;
+                                        border: none;
+                                        margin-left: .5rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        .cart_price {
+                            font-size: 1.8rem;
+                        }
+
+                        .cart_number {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            width: 100%;
+
+                            .toggle_quantity {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 10rem;
+
+                                button {
+                                    background: none;
+                                    border: none;
+                                    font-size: 1.5rem;
+                                    color: blue;
+                                }
+
+                                .cart_quantity {
+                                    font-weight: 600;
+                                    font-size: 1.8rem;
+                                }
+                            }
+
+                        }
+
+                        .cart_subtotal {
+                            font-size: 1.8rem;
+                        }
+
+                        .cart_remove {
+                            font-size: 2.5rem;
+                            color: red;
+                            cursor: pointer;
+                        }
+
+                    }
+
+                    tr:last-child {
+                        border-bottom: none;
+                        border-bottom: .1rem solid gray;
+                    }
+                }
+            }
+        }
+
+        .cart_button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2rem 0;
+
+            button {
+                font-size: 1.8rem;
+            }
+
+            a {
+                font-size: 1.8rem;
+            }
+        }
+
+        .Total_Summary {
+            display: flex;
+            justify-content: flex-end;
+
+            .Total_Summary_Content {
+                width: 25rem;
+                background: rgb(240, 232, 232);
+                padding: 2rem;
+                border-radius: 1rem;
+
+                p {
+                    font-size: 1.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                button {
+                    font-size: 1.8rem;
+                }
+
+
+            }
+        }
+    }
+}
+
+// ===========================================================================
+//  --------------------Cart Length Zero Section--------------------------------
+// =============================================================================
+.cart_legth_zero {
+    display: grid;
+    place-items: center;
+    height: 50vh;
+    font-size: 4rem;
+
+    a {
+        font-size: 2rem;
+    }
+}
+
+// ==================================================================================
+// -------------------------------REGISTER Section----------------------------------
+// ==================================================================================
+
+.register_section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    // margin-bottom: 8rem;
+
+    .reg_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 40rem;
+            height: 50rem;
+        }
+
+    }
+
+    .reg_content {
+        padding: 0 5rem;
+
+        h3 {
+            font-size: 3rem;
+            font-weight: 600;
+            text-decoration: underline blue;
+        }
+
+        form {
+            padding-top: 2rem;
+
+            .input_group {
+                label {
+                    font-size: 2rem;
+                    // font-weight: 600;
+                }
+
+                input {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    color: red;
+                    text-transform: capitalize;
+                }
+            }
+
+            button {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+// ========================================================================
+//-------------------------------Login Section----------------------------------
+// ========================================================================
+
+.login_section {
+    padding-top: 4rem;
+
+    .login_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 40rem;
+            height: 40rem;
+        }
+
+    }
+
+    .login_content {
+        // padding: 0 5rem;
+        // border: 2px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            font-size: 3rem;
+            font-weight: 600;
+            text-decoration: underline blue;
+        }
+
+        form {
+            padding-top: 4rem;
+
+            .input_group {
+                label {
+                    font-size: 2rem;
+                    // font-weight: 600;
+                }
+
+                input {
+                    font-size: 1.8rem;
+                }
+            }
+
+            button {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+// ========================================================================
+//-------------------------------DashBoard Section----------------------------------
+// ========================================================================
+
+// ========================== DashBoard Menu ====================================
+.dashBoard {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background: rgb(240, 232, 232);
+    // padding: 2rem;
+}
+
+.dashBoard_page_menu {
+    background: white;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+
+
+    .dashBoard_Heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid gray;
+
+        .logo_design {
+            width: 5rem;
+            height: 5rem;
+            border: 2px solid rgba(255, 0, 0, 0.7);
+            border-radius: 50%;
+            background: linear-gradient(120deg, rgba(255, 0, 0, 0.7) 55%, rgba(255, 255, 255, 0.5) 45%);
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+
+            span {
+                color: rgba(255, 0, 0, 1);
+            }
+
+        }
+
+        .logo_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100% !important;
+            padding-bottom: 0;
+
+            P:first-child {
+                color: gray !important;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            P:last-child {
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    .dashBoard_btn {
+        font-size: 2.5rem;
+    }
+
+    .offcanvas {
+        button {
+            font-size: 2rem;
+            margin-right: 2rem;
+            color: blue;
+        }
+    }
+
+
+    .list-unstyled {
+        list-style: none;
+
+        li {
+            list-style: none;
+
+            a {
+                font-size: 1.6rem;
+                text-decoration: none;
+                color: black;
+
+                &.active {
+                    color: blue !important;
+                    display: inline;
+                    border-bottom: .2rem solid;
+                }
+            }
+
+            button {
+                font-size: 1.6rem;
+                display: flex;
+                align-items: center;
+                color: black;
+                width: 100%;
+            }
+
+            .collapsed {
+
+                .btn-toggle-nav {
+                    padding-left: 4rem;
+
+                    li {
+                        list-style-type: disc;
+
+
+                        a {
+                            font-size: 1.5rem;
+                            color: #2f4f4f;
+                            text-decoration: none;
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+
+// =====================All Product view Page of DashBoard==============
+.All_Product_view {
+    padding: 0 2rem;
+}
+
+.All_Product_view_content {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+// -----------------------Product Filter For DashBoard---------------------------
+.Product_Filter {
+    h3 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    .Product_Filter_Select {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 2rem;
+
+        select {
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
+            background: white;
+            outline: none;
+            border: .1rem solid gray;
+            border-radius: .5rem;
+            display: grid;
+            place-items: center;
+            text-transform: capitalize;
+
+            option {
+                text-transform: capitalize;
+            }
+        }
+
+    }
+
+    .clear_filter_btn {
+        button {
+            font-size: 1.5rem;
+        }
+
+    }
+
+}
+
+// ------------------------Product Show For DashBoard---------------------------
+.All_Product_Show {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .product_entries {
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .Form_left {
+                label:first-child {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                label:last-child {
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                }
+
+                select {
+                    font-size: 1.5rem;
+                    padding: .9rem 1.5rem;
+                    font-weight: 600;
+                    background: white;
+                    border: .1rem solid gray;
+                    border-radius: .5rem;
+                }
+
+            }
+
+            .Form_Right {
+                label {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                input {
+                    font-size: 1.5rem;
+                    padding: .5rem 1.5rem;
+                    // font-weight: 600;
+                    background: white;
+                    border: .1rem solid gray;
+                    border-radius: .5rem;
+
+                }
+
+            }
+        }
+    }
+
+    .product_entries_show {
+        padding-top: 2rem;
+
+        table {
+            thead {
+                tr {
+                    th {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    .col_image {
+                        .image_declared {
+                            margin: auto;
+                            width: 5rem;
+                            height: 5rem;
+                            border: .1rem solid grey;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    .table_content {
+                        font-size: 1.4rem;
+                        text-transform: capitalize;
+                    }
+
+                    .content_update {
+                        select {
+                            padding: .5rem 1rem;
+                            font-size: 1.4rem;
+                            background: #35cd3a;
+                            color: white;
+                            outline: none;
+                            border: .1rem solid gray;
+                            border-radius: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination_font {
+        font-size: 1.5rem;
+    }
+}
+
+// ==========================Subscriber For DashBoard===========================
+.Subscriber_Section {
+    padding: 0 2rem;
+}
+
+.Subscriber {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+
+    .Subscriber_filter {
+        form {
+            display: flex;
+            justify-content: space-between;
+
+            .Form_left {
+                label:first-child {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                label:last-child {
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                }
+
+                select {
+                    padding: .9rem 1.5rem;
+                    font-size: 1.4rem;
+                    background: none;
+                    outline: none;
+                    border: .1rem solid gray;
+                    border-radius: .5rem;
+                }
+
+            }
+
+            .Form_Right {
+                label {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                input {
+                    font-size: 1.5rem;
+                    padding: .5rem 1.5rem;
+                    background: white;
+                    border: .1rem solid gray;
+                    border-radius: .5rem;
+
+                }
+
+            }
+        }
+    }
+
+    .pagination_font {
+        font-size: 1.5rem;
+    }
+
+    .subscriber_table {
+        padding-top: 2rem;
+
+        table {
+            thead {
+                tr {
+                    th {
+                        font-size: 1.5rem;
+                    }
+
+                }
+            }
+
+            tbody {
+                tr {
+                    .subscriber_content {
+                        font-size: 1.5rem;
+                    }
+
+                    .subscriber_delete {
+                        button {
+                            padding: 0.5rem .5rem;
+                            font-size: 2.5rem;
+                            display: grid;
+                            place-items: center;
+                            border: none;
+                            outline: none;
+                            color: white;
+                            background: rgba(255, 0, 0, 0.5);
+                            border-radius: .5rem;
+                        }
+
+                        button:hover {
+                            background: rgba(255, 0, 0, 1);
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// =========================Add Products For DashBoard==========================
+.Add_Products {
+    padding: 0 2rem;
+
+    .form_card {
+        margin-top: 2rem;
+        background: white;
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+
+        .form_card-body {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 600;
+
+            }
+
+            .Add_product_btn {
+
+                a,
+                button {
+                    font-size: 1.5rem;
+                    color: white;
+                }
+
+            }
+
+            label {
+                font-size: 1.8rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            .gallery_images {
+                display: flex;
+                flex-direction: row;
+                column-gap: 2rem;
+
+                .images {
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    width: 10rem;
+                    height: 10rem;
+                    border: .1rem solid gray;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    button {
+                        position: absolute;
+                        top: -2.4rem;
+                        right: -.6rem;
+                        background: white;
+                        font-size: 2rem;
+                        color: blue;
+                        border-radius: 50%;
+                        border: .1rem solid gray;
+                        display: grid;
+                        place-items: center;
+                        padding: .2rem;
+
+
+                    }
+                }
+            }
+
+            .featured_images {
+                display: flex;
+                flex-direction: row;
+                column-gap: 2rem;
+
+                .images {
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    width: 10rem;
+                    height: 10rem;
+                    border: .1rem solid gray;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    button {
+                        position: absolute;
+                        top: -2.4rem;
+                        right: -.6rem;
+                        background: white;
+                        font-size: 2rem;
+                        color: blue;
+                        border-radius: 50%;
+                        border: .1rem solid gray;
+                        display: grid;
+                        place-items: center;
+                        padding: .2rem;
+
+
+                    }
+                }
+
+            }
+
+            .simple_input {
+                padding: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .upload_input {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                color: blue;
+                padding-top: 1rem;
+            }
+
+            .span_input {
+                span {
+                    font-size: 1.5rem;
+                }
+
+                input {
+                    font-size: 1.5rem;
+                }
+
+            }
+
+            a {
+                font-size: 1.5rem;
+            }
+
+        }
+    }
+}
+
+// =====================Stock out Product page For DashBoard====================
+.Stock_out_products {
+    padding: 0 2.7rem;
+
+    .Stock_out_heading {
+        background: white;
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+
+        .form_card {
+            .form_card-body {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 600;
+
+                }
+
+
+
+            }
+        }
+    }
+
+    .Stock_out_products_Show {
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+
+        .Stock_out_products_entries {
+
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .Form_left {
+                    label:first-child {
+                        font-size: 1.5rem;
+                        margin-right: 1rem;
+                    }
+
+                    label:last-child {
+                        font-size: 1.5rem;
+                        margin-left: 1rem;
+                    }
+
+                    select {
+                        font-size: 1.5rem;
+                        padding: .9rem 1.5rem;
+                        font-weight: 600;
+                        background: white;
+                        border: .1rem solid gray;
+                        border-radius: .5rem;
+                    }
+
+                }
+
+                .Form_Right {
+                    label {
+                        font-size: 1.5rem;
+                        margin-right: 1rem;
+                    }
+
+                    input {
+                        font-size: 1.5rem;
+                        padding: .5rem 1.5rem;
+                        // font-weight: 600;
+                        background: white;
+                        border: .1rem solid gray;
+                        border-radius: .5rem;
+
+                    }
+
+                }
+            }
+        }
+
+        .Stock_out_products_entries_show {
+            padding-top: 2rem;
+
+            table {
+                thead {
+                    tr {
+                        th {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        .col_image {
+                            .image_declared {
+                                margin: auto;
+                                width: 5rem;
+                                height: 5rem;
+                                border: .1rem solid grey;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+
+                        .table_content {
+                            font-size: 1.4rem;
+                            text-transform: capitalize;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+// ===================Order Heading component For DashBoard=====================
+.order_heading {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+
+    .order_heading_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        a {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            font-weight: 700;
+            color: white;
+        }
+    }
+}
+
+.All_order_details {
+    padding: 0 2rem;
+}
+
+.order_Show {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+
+    .order_entries {
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .Form_left {
+                label:first-child {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                label:last-child {
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                }
+
+                select {
+                    font-size: 1.5rem;
+                    padding: .9rem 1.5rem;
+                    font-weight: 600;
+                    background: white;
+                    border: .1rem solid gray;
+                    border-radius: .5rem;
+                }
+
+            }
+
+            .Form_Right {
+                label {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                input {
+                    font-size: 1.5rem;
+                    padding: .5rem 1.5rem;
+                    // font-weight: 600;
+                    background: white;
+                    border: .1rem solid gray;
+                    border-radius: .5rem;
+
+                }
+
+            }
+        }
+    }
+
+    .order_entries_show {
+        padding-top: 2rem;
+
+        table {
+            thead {
+                tr {
+                    th {
+                        font-size: 1.6rem;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+
+                    .table_content {
+                        font-size: 1.4rem;
+                        text-transform: capitalize;
+                    }
+
+                    .table_btn {
+                        display: flex;
+                        flex-direction: row;
+
+                        .button {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 2rem;
+                            margin-right: 2rem;
+                            padding: 0.5rem 1rem;
+                        }
+
+                        button {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 2rem;
+                            padding: .5rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ===========================Order Heading==============================
+.Order_heading {
+    margin-bottom: 2rem;
+
+    .Order_heading_row {
+        .Order_heading_col {
+            .Order_heading_body {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                padding: 2rem;
+                border-radius: 1rem;
+
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+
+                .Add_Order_btn {
+                    display: flex;
+                    flex-direction: row;
+
+                    button:first-child {
+                        margin-right: 2rem;
+                    }
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ===========================Order Invoice==============================
+.Order_Invoice_section {
+    padding: 0 2rem;
+
+    .Order_invoice_show {
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+
+        .Order_invoice_show_row {
+            .main_logo {
+                display: flex;
+                justify-content: center;
+
+                p {
+                    font-size: 2.5rem;
+                    text-decoration: none;
+                    font-weight: 600;
+                    display: inline;
+                    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%);
+                    padding: 0%;
+                    border: .2rem solid rgba(255, 0, 0, 0.5);
+
+                }
+            }
+
+            .order_details,
+            .billing_address,
+            .shipping_address {
+                h4 {
+                    font-size: 2rem;
+                    font-weight: 800;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                    text-transform: capitalize;
+
+                    span {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .products_detail {
+                table {
+                    thead {
+                        tr {
+                            th {
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            .col_image {
+                                .image_declared {
+                                    width: 7rem;
+                                    height: 7rem;
+
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                            }
+
+                            .table_content {
+                                font-size: 1.5rem;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media print {
+
+    .col-lg-6,
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .Order_invoice_show {
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+
+        .Order_invoice_show_row {
+            .main_logo {
+                display: flex;
+                justify-content: center;
+
+                p {
+                    font-size: 2.5rem;
+                    text-decoration: none;
+                    font-weight: 600;
+                    display: inline;
+                    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%) !important;
+                    padding: 0%;
+                    border: .2rem solid rgba(255, 0, 0, 0.5) !important;
+
+                }
+            }
+
+            .order_details,
+            .billing_address,
+            .shipping_address {
+                h4 {
+                    font-size: 2rem;
+                    font-weight: 800;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                    text-transform: capitalize;
+
+                    span {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .products_detail {
+                table {
+                    thead {
+                        tr {
+                            th {
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            .col_image {
+                                .image_declared {
+                                    width: 7rem;
+                                    height: 7rem;
+
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                            }
+
+                            .table_content {
+                                font-size: 1.5rem;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.All_pending_order_details {
+    padding: 0 2rem;
+}
+
+.All_delivered_order_details {
+    padding: 0 2rem;
+}
+
+// ======================Product Category For DashBoard=======================
+.DB_Product_Category {
+    padding: 0 2rem;
+
+}
+
+.pagination_font {
+    font-size: 1.5rem;
+}
+
+.Product_category_delete {
+    button {
+        padding: 0.5rem .5rem;
+        font-size: 2.5rem;
+        display: grid;
+        place-items: center;
+        border: none;
+        outline: none;
+        color: white;
+        background: rgba(255, 0, 0, 0.7);
+        border-radius: .5rem;
+    }
+
+    button:hover {
+        background: rgba(255, 0, 0, 1);
+
+    }
+}
+
+// =========================React confirm alert css==========================
+.react-confirm-alert-body {
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.8rem !important;
+    }
+
+    button {
+        font-size: 1.8rem !important;
+        padding: .8rem 2.5rem !important;
+    }
+}
+
+// =============================All_user_details================================
+.All_user_details {
+    padding: 0 2rem;
+}
+
+.user_Show {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+
+    .user_entries {
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .Form_left {
+                label:first-child {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                label:last-child {
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                }
+
+                select {
+                    font-size: 1.5rem;
+                    padding: .9rem 1.5rem;
+                    font-weight: 600;
+                    background: white;
+                    border: .1rem solid gray;
+                    border-radius: .5rem;
+                }
+
+            }
+
+            .Form_Right {
+                label {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                input {
+                    font-size: 1.5rem;
+                    padding: .5rem 1.5rem;
+                    // font-weight: 600;
+                    background: white;
+                    border: .1rem solid gray;
+                    border-radius: .5rem;
+
+                }
+
+            }
+        }
+    }
+
+    .user_entries_show {
+        padding-top: 2rem;
+
+        table {
+            thead {
+                tr {
+                    th {
+                        font-size: 1.8rem;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+
+                    .table_content {
+                        font-size: 1.8rem;
+                        text-transform: capitalize;
+
+                        .button-container {
+
+                            button,
+                            a {
+                                line-height: 0;
+                                font-size: 1.8rem !important;
+                                padding: .5rem .8rem !important;
+                            }
+
+                        }
+
+                    }
+
+                    .table_content-permission {
+                        font-size: 1.8rem;
+                        text-transform: capitalize;
+                        column-gap: 1rem;
+
+                        span {
+                            font-size: 1.6rem;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// ===============================Role Updates================================
+.Role_update {
+    padding: 0 2rem;
+
+    .role_show {
+        padding: 10rem 20rem;
+        background: white;
+        border-radius: 1rem;
+
+        form {
+            .role-row {
+                row-gap: 2rem;
+
+                .role-col-main {
+                    .role-name-group {
+                        label {
+                            font-size: 1.8rem;
+                            font-weight: 800;
+                            color: #474748;
+
+                        }
+
+                        input {
+                            font-size: 1.8rem;
+                        }
+
+                    }
+                }
+
+                .role-col {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    input {
+                        font-size: 1.8rem;
+                    }
+
+                    label {
+                        text-transform: capitalize;
+                        font-size: 1.8rem;
+                        color: #474748;
+
+                    }
+
+                    button {
+                        padding: .5rem 2rem;
+                        font-size: 1.8rem;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
+
+// ===============================System User ============================
+.All_SystemUser_details {
+    padding: 0 2rem;
+
+    .SystemUser_Show {
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+
+        .SystemUser_entries {
+
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .Form_left {
+                    label:first-child {
+                        font-size: 1.5rem;
+                        margin-right: 1rem;
+                    }
+
+                    label:last-child {
+                        font-size: 1.5rem;
+                        margin-left: 1rem;
+                    }
+
+                    select {
+                        font-size: 1.5rem;
+                        padding: .9rem 1.5rem;
+                        font-weight: 600;
+                        background: white;
+                        border: .1rem solid gray;
+                        border-radius: .5rem;
+                    }
+
+                }
+
+                .Form_Right {
+                    label {
+                        font-size: 1.5rem;
+                        margin-right: 1rem;
+                    }
+
+                    input {
+                        font-size: 1.5rem;
+                        padding: .5rem 1.5rem;
+                        // font-weight: 600;
+                        background: white;
+                        border: .1rem solid gray;
+                        border-radius: .5rem;
+
+                    }
+
+                }
+            }
+        }
+
+        .SystemUser_entries_show {
+            padding-top: 2rem;
+
+            table {
+                thead {
+                    tr {
+                        th {
+                            font-size: 1.8rem;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+
+                        .table_content {
+                            font-size: 1.8rem;
+                            text-transform: capitalize;
+
+                            .button-container {
+
+                                button,
+                                a {
+                                    line-height: 0;
+                                    font-size: 1.8rem !important;
+                                    padding: .5rem .8rem !important;
+                                }
+
+                            }
+
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// =============================System User Updates============================
+.All_SystemUserUpdate_details {
+    padding: 0 2rem;
+
+    .SystemUserUpdate_Show {
+        padding: 5rem 10rem;
+        background: white;
+        border-radius: 1rem;
+
+        form {
+            .input_group {
+                margin: auto;
+
+                label {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+
+                input {
+                    font-size: 1.8rem;
+                }
+
+                select {
+                    font-size: 1.8rem;
+
+                    option {
+                        font-size: 1.8rem;
+
+                    }
+                }
+            }
+
+            .btn-update {
+                margin: auto;
+
+                button {
+                    font-size: 1.8rem;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+// ===============================Other User ================================
+.All_OtherUser_details {
+    padding: 0 2rem;
+
+    .OtherUser_Show {
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+
+        .OtherUser_entries {
+
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .Form_left {
+                    label:first-child {
+                        font-size: 1.5rem;
+                        margin-right: 1rem;
+                    }
+
+                    label:last-child {
+                        font-size: 1.5rem;
+                        margin-left: 1rem;
+                    }
+
+                    select {
+                        font-size: 1.5rem;
+                        padding: .9rem 1.5rem;
+                        font-weight: 600;
+                        background: white;
+                        border: .1rem solid gray;
+                        border-radius: .5rem;
+                    }
+
+                }
+
+                .Form_Right {
+                    label {
+                        font-size: 1.5rem;
+                        margin-right: 1rem;
+                    }
+
+                    input {
+                        font-size: 1.5rem;
+                        padding: .5rem 1.5rem;
+                        // font-weight: 600;
+                        background: white;
+                        border: .1rem solid gray;
+                        border-radius: .5rem;
+
+                    }
+
+                }
+            }
+        }
+
+        .OtherUser_entries_show {
+            padding-top: 2rem;
+
+            table {
+                thead {
+                    tr {
+                        th {
+                            font-size: 1.8rem;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+
+                        .table_content {
+                            font-size: 1.8rem;
+                            text-transform: capitalize;
+
+                            .button-container {
+
+                                button,
+                                a {
+                                    line-height: 0;
+                                    font-size: 1.8rem !important;
+                                    padding: .5rem .8rem !important;
+                                }
+
+                            }
+
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ============================Other User Updates============================
+.All_OtherUserUpdate_details {
+    padding: 0 2rem;
+
+    .OtherUserUpdate_Show {
+        padding: 5rem 10rem;
+        background: white;
+        border-radius: 1rem;
+
+        form {
+            .input_group {
+                margin: auto;
+
+                label {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+
+                input {
+                    font-size: 1.8rem;
+                }
+
+                select {
+                    font-size: 1.8rem;
+
+                    option {
+                        font-size: 1.8rem;
+
+                    }
+                }
+            }
+
+            .btn-update {
+                margin: auto;
+
+                button {
+                    font-size: 1.8rem;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+// ==============================Toaster Body==============================
+
+.toastBody {
+    font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+
+}
+
+//================================Send Email==================================
+.send_Email {
+    padding: 0 2rem;
+
+    .send_email_content {
+        padding: 5rem 10rem;
+        background: white;
+        border-radius: 1rem;
+
+        form {
+            .send_email_content_show {
+                display: flex;
+                flex-direction: column;
+                row-gap: 2rem;
+
+                .email_content {
+                    button {
+                        font-size: 1.8rem;
+                    }
+
+                    .email_content-group {
+                        label {
+                            font-size: 1.8rem;
+                            // font-weight: 500;
+                        }
+
+
+                        textarea,
+                        input {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+//========================Payment Success Page==================================
+.paymentSuccess {
+    padding: 5rem;
+    margin-bottom: 4rem;
+
+    .container {
+        .paymentSuccess_row {
+            .paymentSuccess_col {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .payment_card {
+                    width: 45rem;
+                    height: auto;
+                    border-radius: 1rem;
+                    border: 1px solid rgb(240, 232, 232);
+
+                    .card_header {
+                        border-radius: .5rem .5rem 0 0;
+                        background-color: rgb(240, 232, 232);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 3rem;
+
+                        h4 {
+                            font-size: 4rem;
+                            font-weight: 800;
+                            text-transform: capitalize;
+                            color: rgb(128, 123, 123);
+
+                        }
+
+                        p {
+                            font-size: 2rem;
+                            text-transform: lowercase;
+
+                        }
+                    }
+
+                    .card_content {
+                        padding: 3rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .succ_content {
+                            font-size: 3.5rem;
+                            color: #2f4f4f;
+                            font-weight: 900;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    .card_footer {
+                        border-radius: 0 0 .5rem .5rem;
+                        background-color: rgb(240, 232, 232);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 3rem;
+
+                        p {
+                            font-size: 2rem;
+                            color: gray;
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+//========================Payment Cancel Page==================================
+.paymentCancel {
+    padding: 5rem;
+    margin-bottom: 4rem;
+
+    .container {
+        .paymentCancel_row {
+            .paymentCancel_col {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .payment_card {
+                    width: 45rem;
+                    height: auto;
+                    border-radius: 1rem;
+                    border: 1px solid rgb(240, 232, 232);
+
+                    .card_header {
+                        border-radius: .5rem .5rem 0 0;
+                        background-color: rgb(240, 232, 232);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 3rem;
+
+                        h4 {
+                            font-size: 4rem;
+                            font-weight: 800;
+                            text-transform: capitalize;
+                            color: rgb(128, 123, 123);
+
+                        }
+
+                        p {
+                            font-size: 2rem;
+                            text-transform: lowercase;
+
+                        }
+                    }
+
+                    .card_content {
+                        padding: 3rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .cancel_content {
+                            font-size: 3.5rem;
+                            color: #2f4f4f;
+                            font-weight: 900;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    .card_footer {
+                        border-radius: 0 0 .5rem .5rem;
+                        background-color: rgb(240, 232, 232);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 3rem;
+
+                        p {
+                            font-size: 2rem;
+                            color: gray;
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 55%;
+    }
+
+    .Product_Price_Range_Section {
+        input {
+            width: 100%;
+            height: 3rem;
+            color: blue;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+    }
+
+    .main_footer {
+        .main_footer_row {
+            display: flex;
+            justify-content: flex-start;
+
+            .main_footer_col_1,
+            .main_footer_col_2,
+            .main_footer_col_3,
+            .main_footer_col_4 {
+                width: 50% !important;
+            }
+        }
+    }
+
+    .dashBoard_page_menu {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .dashBoard_Heading {
+        border-bottom: none !important;
+    }
+
+}
+
+@media screen and (max-width: 881px) {
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 45%;
+    }
+
+
+}
+
+@media screen and (max-width: 726px) {
+    html {
+        font-size: 40%;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    html {
+        font-size: 35%;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 30%;
+    }
+
+    .container {
+        padding: 0 5rem;
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+    html {
+        font-size: 25%;
+    }
+
+    .container {
+        padding: 0 3rem;
+    }
+
+    .react-confirm-alert-overlay {
+        align-items: center !important;
+    }
+
+    .react-confirm-alert-body {
+        max-width: 70% !important;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 20%;
+    }
+
+    .container {
+        padding: 0 3rem;
+    }
+
+    .trusted_col {
+        .swiper {
+            .swiper-slide {
+                padding-bottom: 5rem;
+
+            }
+        }
+    }
+
+    .react-confirm-alert-overlay {
+        align-items: center !important;
+    }
+
+    .react-confirm-alert-body {
+        max-width: 70% !important;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 15%;
+    }
+
+    .container {
+        padding: 0 3rem;
+    }
+
+    .trusted_col {
+        .swiper {
+            .swiper-slide {
+                padding-bottom: 8rem;
+
+            }
+        }
+    }
+
+    .react-confirm-alert-overlay {
+        align-items: center !important;
+    }
+
+    .react-confirm-alert-body {
+        max-width: 50% !important;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 240px) {
+    html {
+        font-size: 10%;
+    }
+
+    .container {
+        padding: 0 5rem;
+    }
+
+    .react-confirm-alert-overlay {
+        align-items: center !important;
+    }
+
+    .react-confirm-alert-body {
+        max-width: 50% !important;
+        margin: auto;
+    }
+    
+    .Toastify__toast-body {
+        font-size: 7rem; /* Adjust the font size as needed */
+      }
+      
+      .Toastify__toast-container {
+        width: 90%; /* Adjust the width as needed */
+        // max-width: 300px; /* Adjust the maximum width as needed */
+      }
+      
+      .Toastify__toast {
+        padding: 10px; /* Adjust the padding as needed */
+      }
+}

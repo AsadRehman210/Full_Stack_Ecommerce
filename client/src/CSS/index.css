@@ -1,0 +1,2365 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Ensure wrapper fills the viewport */
+}
+
+main {
+  margin-bottom: 8rem;
+  flex: 1;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0%;
+  z-index: 100000000000;
+}
+
+.main_navbar {
+  background: rgb(240, 232, 232);
+  height: 6.6rem;
+}
+.main_navbar .nav_brand {
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%);
+  padding: 0%;
+  border: 0.2rem solid rgba(255, 0, 0, 0.5);
+}
+.main_navbar .toggle_btn {
+  font-size: 3rem;
+  border: none;
+}
+.main_navbar .offcanvas-header {
+  border-bottom: 0.2rem solid;
+}
+.main_navbar .offcanvas-header .offcanvas-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.main_navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+.main_navbar .navbar-nav li a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(15, 15, 69);
+  font-weight: 500;
+}
+.main_navbar .navbar-nav li a.active {
+  color: blue;
+  display: inline;
+  border-bottom: 0.2rem solid;
+}
+.main_navbar .navbar-nav li:last-child {
+  position: relative;
+  width: 2.5rem;
+}
+.main_navbar .navbar-nav li:last-child a {
+  font-size: 3rem;
+  font-weight: 500;
+  border-bottom: none;
+}
+.main_navbar .navbar-nav li:last-child a span {
+  font-size: 2rem;
+  line-height: 2rem;
+  background: rgba(187, 4, 4, 0.5);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: -2rem;
+  top: 0.2rem;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+.main_navbar .navbar-nav li:last-child a.active {
+  color: blue;
+  display: inline-block;
+  border-bottom: none;
+}
+
+.hero_section {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40rem;
+  padding: 4rem 0;
+}
+.hero_section .hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero_section .hero_content .hero_small_Heading {
+  font-size: 1.8rem;
+  color: blue;
+  text-transform: capitalize;
+}
+.hero_section .hero_content h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.hero_section .hero_content .hero_para {
+  font-size: 1.7rem;
+  text-align: justify;
+}
+.hero_section .hero_content .hero_btn {
+  font-size: 1.7rem;
+}
+.hero_section .hero_image {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.hero_section .hero_image .hero_img_bg {
+  background: blue;
+  width: 35rem;
+  height: 35rem;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 0 100%, 0 10%, 87% 10%, 87% 100%, 0 100%, 0 100%, 100% 50%, 100% 0%);
+          clip-path: polygon(50% 0%, 0% 100%, 0 100%, 0 10%, 87% 10%, 87% 100%, 0 100%, 0 100%, 100% 50%, 100% 0%);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.hero_section .hero_image img {
+  height: 42rem;
+  width: 40rem;
+  z-index: 2;
+}
+
+.FeatureProducts_section {
+  padding: 4rem 0;
+  background: rgb(240, 232, 232);
+}
+.FeatureProducts_section .feature_smallHeading {
+  font-size: 1.5rem;
+  color: blue;
+  text-transform: capitalize;
+}
+.FeatureProducts_section .feature_mainHeading {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.FeatureProducts_section .FeatureProducts_row {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  row-gap: 4rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.FeatureProducts_col {
+  width: 27rem;
+  padding: 0;
+  text-decoration: none;
+}
+.FeatureProducts_col .card {
+  width: 27rem;
+  border: none;
+  margin: 0;
+}
+.FeatureProducts_col .card figure {
+  position: relative;
+  overflow: hidden;
+  height: 15rem;
+  width: 27rem;
+}
+.FeatureProducts_col .card figure img {
+  width: 100%;
+  height: 100%;
+}
+.FeatureProducts_col .card figure figcaption {
+  text-transform: capitalize;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: auto;
+  background: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin-left: auto;
+  border-radius: 5rem;
+}
+.FeatureProducts_col .card figure figcaption:hover {
+  color: white;
+  background: blue;
+}
+.FeatureProducts_col .card figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+}
+.FeatureProducts_col .card figure:hover::before {
+  left: 0;
+}
+.FeatureProducts_col .card .card-body {
+  display: flex;
+  justify-content: space-between;
+}
+.FeatureProducts_col .card .card-body p {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+.Services_section {
+  background: white;
+  padding: 4rem 0;
+}
+.Services_section .Services_row .Services_cards .card {
+  border: none;
+  background: rgb(240, 232, 232);
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.Services_section .Services_row .Services_cards .card .card-img {
+  font-size: 3rem;
+  color: blue;
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 50%;
+  width: auto;
+  display: grid;
+  place-items: center;
+}
+.Services_section .Services_row .Services_cards .card .card_content p {
+  font-size: 1.5rem;
+}
+.Services_section .Services_row .Services_cards_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Services_section .Services_row .Services_cards_2 .Services_cards_row {
+  height: 45%;
+}
+.Services_section .Services_row .Services_cards_2 .Services_cards_row .card {
+  height: 98%;
+  border: none;
+  background: rgb(240, 232, 232);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.Services_section .Services_row .Services_cards_2 .Services_cards_row .card-img {
+  font-size: 3rem;
+  color: blue;
+  padding: 1rem;
+  background: white;
+  border-radius: 50%;
+  width: 5rem;
+  margin-right: 2rem;
+  display: grid;
+  place-items: center;
+}
+.Services_section .Services_row .Services_cards_2 .Services_cards_row .card_content p {
+  font-size: 1.5rem;
+}
+
+.Trusted_section {
+  background: rgb(240, 232, 232);
+  padding: 4rem 0;
+}
+.Trusted_section h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: gray;
+}
+.Trusted_section .trusted_row {
+  padding-top: 4rem;
+}
+.Trusted_section .trusted_row .trusted_col .swiper {
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.Trusted_section .trusted_row .trusted_col .swiper .swiper-slide .slider_img {
+  width: 15rem;
+  height: 10rem;
+}
+.Trusted_section .trusted_row .trusted_col .swiper .swiper-slide .slider_img img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact_section {
+  padding-top: 4rem;
+}
+.contact_section h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+.contact_section .map-container {
+  width: 100%;
+  height: 40rem;
+}
+.contact_section .map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact_section .form_row {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+.contact_section .form_row .form_col {
+  max-width: 50rem;
+}
+.contact_section .form_row .form_col form {
+  display: flex;
+  flex-direction: column;
+}
+.contact_section .form_row .form_col form input {
+  font-size: 2rem;
+  height: auto;
+  margin-bottom: 3rem;
+}
+.contact_section .form_row .form_col form textarea {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footercom {
+  margin-top: auto;
+  width: 100%;
+  padding: 0 0 1rem 0;
+  background: rgb(2, 2, 41);
+}
+.footercom .footer_1 {
+  width: 100rem;
+  position: relative;
+  top: -4rem;
+  margin: auto;
+}
+.footercom .footer_1 .footer_1_row {
+  background: rgb(240, 232, 232);
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+}
+.footercom .footer_1 .footer_1_row .footer_1_col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footercom .footer_1 .footer_1_row .footer_1_col .footer_1_content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.footercom .footer_1 .footer_1_row .footer_1_col .footer_1_content p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.footercom .footer_1 .footer_1_row .footer_1_col .footer_1_btn a {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.footercom .main_footer {
+  padding-bottom: 2rem;
+  width: 100%;
+}
+.footercom .main_footer .main_footer_row {
+  padding: 0 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  row-gap: 3rem;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_1 h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_1 p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 100;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_2 h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_2 form {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_2 form input {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_2 form button {
+  font-size: 1.2rem;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_3 {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_3 h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_3 .social_icon {
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_3 .social_icon a {
+  font-size: 2rem;
+  color: white;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_4 {
+  justify-self: flex-end;
+  width: auto;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_4 h3 {
+  width: auto;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footercom .main_footer .main_footer_row .main_footer_col_4 .footer_call a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.footercom .footer_bottom {
+  padding-top: 1rem;
+  width: 100%;
+}
+.footercom .footer_bottom .footer_bottom_row {
+  padding: 0 0.7rem;
+  display: grid;
+  place-items: center;
+}
+.footercom .footer_bottom .footer_bottom_row .footer_bottom_col {
+  display: flex;
+  justify-content: space-between;
+}
+.footercom .footer_bottom .footer_bottom_row .footer_bottom_col p {
+  color: white;
+  font-size: 1rem;
+}
+
+.Error_section .err_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Error_section .err_content .err_404 {
+  font-size: 15rem;
+  font-weight: bold;
+}
+.Error_section .err_content h4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.Error_section .err_content .para {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.Error_section .err_content .button {
+  padding-top: 2rem;
+}
+.Error_section .err_content .button .btn1 {
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+.Error_section .err_content .button .btn2 {
+  font-size: 1.8rem;
+}
+
+.singleProduct_section .mainHeading_div {
+  padding: 2rem 0;
+  background: rgb(240, 232, 232);
+}
+.singleProduct_section .mainHeading_div .Main_Heading {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+.singleProduct_section .mainHeading_div .Main_Heading a {
+  text-decoration: none;
+}
+.singleProduct_section .single_Product_row {
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  row-gap: 3rem;
+}
+.singleProduct_section .single_Product_row .single_Product_ImagePortion .single_product_image_row .single_product_image_small {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.singleProduct_section .single_Product_row .single_Product_ImagePortion .single_product_image_row .single_product_image_small div {
+  width: 12rem;
+  height: 7rem;
+  cursor: pointer;
+}
+.singleProduct_section .single_Product_row .single_Product_ImagePortion .single_product_image_row .single_product_image_small div img {
+  width: 100%;
+  height: 100%;
+}
+.singleProduct_section .single_Product_row .single_Product_ImagePortion .single_product_image_row .single_product_image_large {
+  display: flex;
+  align-items: center;
+}
+.singleProduct_section .single_Product_row .single_Product_ImagePortion .single_product_image_row .single_product_image_large div {
+  width: 30rem;
+  height: 30rem;
+}
+.singleProduct_section .single_Product_row .single_Product_ImagePortion .single_product_image_row .single_product_image_large div img {
+  width: 100%;
+  height: 100%;
+}
+.singleProduct_section .single_Product_row .single_Product_content h3 {
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.singleProduct_section .single_Product_row .single_Product_content .customer_review {
+  display: flex;
+  align-items: center;
+}
+.singleProduct_section .single_Product_row .single_Product_content .customer_review .star_review {
+  margin-right: 2rem;
+  font-size: 1.8rem;
+  color: orange;
+  font-weight: 900;
+}
+.singleProduct_section .single_Product_row .single_Product_content .customer_review .numb_reviews {
+  font-size: 1.5rem;
+  color: gray;
+}
+.singleProduct_section .single_Product_row .single_Product_content .previous_price {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.singleProduct_section .single_Product_row .single_Product_content .current_price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: blue;
+}
+.singleProduct_section .single_Product_row .single_Product_content .single_description {
+  font-size: 1.8rem;
+  text-align: justify;
+  color: gray;
+}
+.singleProduct_section .single_Product_row .single_Product_content .company_services {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.2rem solid gray;
+}
+.singleProduct_section .single_Product_row .single_Product_content .company_services .services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.singleProduct_section .single_Product_row .single_Product_content .company_services .services .service_img {
+  padding: 0.6rem 0.6rem;
+  background: rgb(240, 232, 232);
+  border-radius: 5rem;
+  font-size: 1.7rem;
+  display: grid;
+  place-items: center;
+}
+.singleProduct_section .single_Product_row .single_Product_content .company_services .services p {
+  padding-top: 1rem;
+  color: gray;
+  font-size: 1.2rem;
+}
+.singleProduct_section .single_Product_row .single_Product_content .single_para {
+  font-size: 1.2rem;
+  color: gray;
+}
+.singleProduct_section .single_Product_row .single_Product_content hr {
+  width: 90%;
+  height: 0.1rem solid red;
+}
+.singleProduct_section .single_Product_row .single_Product_content .color_section {
+  font-size: 1.5rem;
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.singleProduct_section .single_Product_row .single_Product_content .color_section button {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+.singleProduct_section .single_Product_row .single_Product_content .cart_btn {
+  font-size: 1.8rem;
+  padding-top: 2rem;
+}
+.singleProduct_section .single_Product_row .single_Product_content .cart_btn .toggle_quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+}
+.singleProduct_section .single_Product_row .single_Product_content .cart_btn .toggle_quantity button {
+  background: none;
+  border: none;
+}
+.singleProduct_section .single_Product_row .single_Product_content .cart_btn .toggle_quantity .cart_quantity {
+  font-weight: 600;
+}
+.singleProduct_section .single_Product_row .single_Product_content .cart_btn a {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+.products_section {
+  padding: 4rem 0;
+}
+
+.Product_List_Row {
+  padding-bottom: 4rem;
+}
+.Product_List_Row .Product_List_col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Product_List_Row .Product_List_col .product_List_btn {
+  display: flex;
+}
+.Product_List_Row .Product_List_col .product_List_btn button {
+  font-size: 2rem;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+}
+.Product_List_Row .Product_List_col .product_length {
+  font-size: 1.5rem;
+  color: gray;
+}
+.Product_List_Row .Product_List_col .sort_selection .input-group {
+  width: auto;
+  font-size: 1.5rem;
+}
+.Product_List_Row .Product_List_col .sort_selection .input-group select {
+  width: auto;
+  font-size: 1.5rem;
+  padding: 0.2rem 2rem;
+}
+
+.Product_Show {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  row-gap: 2rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.listView_section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.listView_section .listView_row {
+  border: 0.1rem solid rgb(240, 232, 232);
+  padding: 2rem 4rem;
+}
+.listView_section .listView_row .listView_images {
+  display: grid;
+  place-items: center;
+}
+.listView_section .listView_row .listView_images .view_img {
+  width: 25rem;
+  height: 15rem;
+  position: relative;
+  overflow: hidden;
+}
+.listView_section .listView_row .listView_images .view_img img {
+  width: 100%;
+  height: 100%;
+}
+.listView_section .listView_row .listView_images .view_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+}
+.listView_section .listView_row .listView_images .view_img:hover::before {
+  left: 0;
+}
+.listView_section .listView_row .listView_content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.listView_section .listView_row .listView_content .listView_price {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  color: gray;
+  font-weight: 600;
+}
+.listView_section .listView_row .listView_content .listView_description {
+  font-size: 1.4rem;
+}
+.listView_section .listView_row .listView_content button {
+  font-size: 1.2rem;
+}
+
+.product_Filter_Section .Product_search form input {
+  font-size: 1.5rem;
+  padding: 0.2rem 1rem;
+}
+
+.product_category_section {
+  padding-top: 3rem;
+}
+.product_category_section h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.product_category_section .category_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.product_category_section .category_btn button {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-left: 2rem;
+  border: none;
+}
+
+.Product_Company_Section {
+  padding-top: 1rem;
+}
+.Product_Company_Section h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.Product_Company_Section form .company_selection {
+  width: 20rem;
+}
+.Product_Company_Section form .company_selection select {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 0.2rem 2rem;
+}
+
+.Product_Color_Section {
+  padding-top: 2rem;
+}
+.Product_Color_Section h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.Product_Color_Section .btn_color {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.Product_Color_Section .btn_color button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.Product_Price_Range_Section {
+  padding-top: 2rem;
+}
+.Product_Price_Range_Section h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.Product_Price_Range_Section p {
+  font-size: 1.2rem;
+}
+.Product_Price_Range_Section input {
+  width: 80%;
+  color: blue;
+  background-color: blue;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Clear_Filter_Section {
+  padding-top: 2rem;
+}
+.Clear_Filter_Section button {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.cart_section {
+  padding-top: 4rem;
+}
+.cart_section .cart_row .cart_col_content {
+  padding-bottom: 2rem;
+}
+.cart_section .cart_row .cart_col_content table thead tr {
+  border-bottom: 0.1rem solid gray;
+}
+.cart_section .cart_row .cart_col_content table thead tr th {
+  font-size: 1.8rem;
+  padding: 1.5rem 0;
+}
+.cart_section .cart_row .cart_col_content table tbody tr td {
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_title {
+  display: flex;
+  align-items: center;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_title .cart_img {
+  width: 4rem;
+  height: 4rem;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_title .cart_img img {
+  width: 100%;
+  height: 100%;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_title .cart_img_content {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_title .cart_img_content p {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_title .cart_img_content p button {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  border: none;
+  margin-left: 0.5rem;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_price {
+  font-size: 1.8rem;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_number .toggle_quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_number .toggle_quantity button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: blue;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_number .toggle_quantity .cart_quantity {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_subtotal {
+  font-size: 1.8rem;
+}
+.cart_section .cart_row .cart_col_content table tbody tr .cart_remove {
+  font-size: 2.5rem;
+  color: red;
+  cursor: pointer;
+}
+.cart_section .cart_row .cart_col_content table tbody tr:last-child {
+  border-bottom: none;
+  border-bottom: 0.1rem solid gray;
+}
+.cart_section .cart_row .cart_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.cart_section .cart_row .cart_button button {
+  font-size: 1.8rem;
+}
+.cart_section .cart_row .cart_button a {
+  font-size: 1.8rem;
+}
+.cart_section .cart_row .Total_Summary {
+  display: flex;
+  justify-content: flex-end;
+}
+.cart_section .cart_row .Total_Summary .Total_Summary_Content {
+  width: 25rem;
+  background: rgb(240, 232, 232);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.cart_section .cart_row .Total_Summary .Total_Summary_Content p {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.cart_section .cart_row .Total_Summary .Total_Summary_Content button {
+  font-size: 1.8rem;
+}
+
+.cart_legth_zero {
+  display: grid;
+  place-items: center;
+  height: 50vh;
+  font-size: 4rem;
+}
+.cart_legth_zero a {
+  font-size: 2rem;
+}
+
+.register_section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.register_section .reg_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register_section .reg_image img {
+  width: 40rem;
+  height: 50rem;
+}
+.register_section .reg_content {
+  padding: 0 5rem;
+}
+.register_section .reg_content h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  -webkit-text-decoration: underline blue;
+          text-decoration: underline blue;
+}
+.register_section .reg_content form {
+  padding-top: 2rem;
+}
+.register_section .reg_content form .input_group label {
+  font-size: 2rem;
+}
+.register_section .reg_content form .input_group input {
+  font-size: 1.8rem;
+}
+.register_section .reg_content form .input_group p {
+  font-size: 1.5rem;
+  color: red;
+  text-transform: capitalize;
+}
+.register_section .reg_content form button {
+  font-size: 1.8rem;
+}
+
+.login_section {
+  padding-top: 4rem;
+}
+.login_section .login_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_section .login_img img {
+  width: 40rem;
+  height: 40rem;
+}
+.login_section .login_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login_section .login_content h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  -webkit-text-decoration: underline blue;
+          text-decoration: underline blue;
+}
+.login_section .login_content form {
+  padding-top: 4rem;
+}
+.login_section .login_content form .input_group label {
+  font-size: 2rem;
+}
+.login_section .login_content form .input_group input {
+  font-size: 1.8rem;
+}
+.login_section .login_content form button {
+  font-size: 1.8rem;
+}
+
+.dashBoard {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: rgb(240, 232, 232);
+}
+
+.dashBoard_page_menu {
+  background: white;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.dashBoard_page_menu .dashBoard_Heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+.dashBoard_page_menu .dashBoard_Heading .logo_design {
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid rgba(255, 0, 0, 0.7);
+  border-radius: 50%;
+  background: linear-gradient(120deg, rgba(255, 0, 0, 0.7) 55%, rgba(255, 255, 255, 0.5) 45%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.dashBoard_page_menu .dashBoard_Heading .logo_design span {
+  color: rgb(255, 0, 0);
+}
+.dashBoard_page_menu .dashBoard_Heading .logo_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100% !important;
+  padding-bottom: 0;
+}
+.dashBoard_page_menu .dashBoard_Heading .logo_content P:first-child {
+  color: gray !important;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.dashBoard_page_menu .dashBoard_Heading .logo_content P:last-child {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.dashBoard_page_menu .dashBoard_btn {
+  font-size: 2.5rem;
+}
+.dashBoard_page_menu .offcanvas button {
+  font-size: 2rem;
+  margin-right: 2rem;
+  color: blue;
+}
+.dashBoard_page_menu .list-unstyled {
+  list-style: none;
+}
+.dashBoard_page_menu .list-unstyled li {
+  list-style: none;
+}
+.dashBoard_page_menu .list-unstyled li a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+}
+.dashBoard_page_menu .list-unstyled li a.active {
+  color: blue !important;
+  display: inline;
+  border-bottom: 0.2rem solid;
+}
+.dashBoard_page_menu .list-unstyled li button {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  color: black;
+  width: 100%;
+}
+.dashBoard_page_menu .list-unstyled li .collapsed .btn-toggle-nav {
+  padding-left: 4rem;
+}
+.dashBoard_page_menu .list-unstyled li .collapsed .btn-toggle-nav li {
+  list-style-type: disc;
+}
+.dashBoard_page_menu .list-unstyled li .collapsed .btn-toggle-nav li a {
+  font-size: 1.5rem;
+  color: #2f4f4f;
+  text-decoration: none;
+}
+
+.All_Product_view {
+  padding: 0 2rem;
+}
+
+.All_Product_view_content {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.Product_Filter h3 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 600;
+}
+.Product_Filter .Product_Filter_Select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.Product_Filter .Product_Filter_Select select {
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  background: white;
+  outline: none;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  text-transform: capitalize;
+}
+.Product_Filter .Product_Filter_Select select option {
+  text-transform: capitalize;
+}
+.Product_Filter .clear_filter_btn button {
+  font-size: 1.5rem;
+}
+
+.All_Product_Show {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.All_Product_Show .product_entries form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.All_Product_Show .product_entries form .Form_left label:first-child {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.All_Product_Show .product_entries form .Form_left label:last-child {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.All_Product_Show .product_entries form .Form_left select {
+  font-size: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.All_Product_Show .product_entries form .Form_Right label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.All_Product_Show .product_entries form .Form_Right input {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.All_Product_Show .product_entries_show {
+  padding-top: 2rem;
+}
+.All_Product_Show .product_entries_show table thead tr th {
+  font-size: 1.6rem;
+}
+.All_Product_Show .product_entries_show table tbody tr .col_image .image_declared {
+  margin: auto;
+  width: 5rem;
+  height: 5rem;
+  border: 0.1rem solid grey;
+}
+.All_Product_Show .product_entries_show table tbody tr .col_image .image_declared img {
+  width: 100%;
+  height: 100%;
+}
+.All_Product_Show .product_entries_show table tbody tr .table_content {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.All_Product_Show .product_entries_show table tbody tr .content_update select {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  background: #35cd3a;
+  color: white;
+  outline: none;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.All_Product_Show .pagination_font {
+  font-size: 1.5rem;
+}
+
+.Subscriber_Section {
+  padding: 0 2rem;
+}
+
+.Subscriber {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.Subscriber h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+.Subscriber .Subscriber_filter form {
+  display: flex;
+  justify-content: space-between;
+}
+.Subscriber .Subscriber_filter form .Form_left label:first-child {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.Subscriber .Subscriber_filter form .Form_left label:last-child {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.Subscriber .Subscriber_filter form .Form_left select {
+  padding: 0.9rem 1.5rem;
+  font-size: 1.4rem;
+  background: none;
+  outline: none;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.Subscriber .Subscriber_filter form .Form_Right label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.Subscriber .Subscriber_filter form .Form_Right input {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.Subscriber .pagination_font {
+  font-size: 1.5rem;
+}
+.Subscriber .subscriber_table {
+  padding-top: 2rem;
+}
+.Subscriber .subscriber_table table thead tr th {
+  font-size: 1.5rem;
+}
+.Subscriber .subscriber_table table tbody tr .subscriber_content {
+  font-size: 1.5rem;
+}
+.Subscriber .subscriber_table table tbody tr .subscriber_delete button {
+  padding: 0.5rem 0.5rem;
+  font-size: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgba(255, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+.Subscriber .subscriber_table table tbody tr .subscriber_delete button:hover {
+  background: rgb(255, 0, 0);
+}
+
+.Add_Products {
+  padding: 0 2rem;
+}
+.Add_Products .form_card {
+  margin-top: 2rem;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+}
+.Add_Products .form_card .form_card-body {
+  display: flex;
+  flex-direction: column;
+}
+.Add_Products .form_card .form_card-body h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.Add_Products .form_card .form_card-body .Add_product_btn a,
+.Add_Products .form_card .form_card-body .Add_product_btn button {
+  font-size: 1.5rem;
+  color: white;
+}
+.Add_Products .form_card .form_card-body label {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.Add_Products .form_card .form_card-body .gallery_images {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.Add_Products .form_card .form_card-body .gallery_images .images {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 10rem;
+  height: 10rem;
+  border: 0.1rem solid gray;
+  position: relative;
+}
+.Add_Products .form_card .form_card-body .gallery_images .images img {
+  width: 100%;
+  height: 100%;
+}
+.Add_Products .form_card .form_card-body .gallery_images .images button {
+  position: absolute;
+  top: -2.4rem;
+  right: -0.6rem;
+  background: white;
+  font-size: 2rem;
+  color: blue;
+  border-radius: 50%;
+  border: 0.1rem solid gray;
+  display: grid;
+  place-items: center;
+  padding: 0.2rem;
+}
+.Add_Products .form_card .form_card-body .featured_images {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.Add_Products .form_card .form_card-body .featured_images .images {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 10rem;
+  height: 10rem;
+  border: 0.1rem solid gray;
+  position: relative;
+}
+.Add_Products .form_card .form_card-body .featured_images .images img {
+  width: 100%;
+  height: 100%;
+}
+.Add_Products .form_card .form_card-body .featured_images .images button {
+  position: absolute;
+  top: -2.4rem;
+  right: -0.6rem;
+  background: white;
+  font-size: 2rem;
+  color: blue;
+  border-radius: 50%;
+  border: 0.1rem solid gray;
+  display: grid;
+  place-items: center;
+  padding: 0.2rem;
+}
+.Add_Products .form_card .form_card-body .simple_input {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.Add_Products .form_card .form_card-body .upload_input {
+  font-size: 1.5rem;
+}
+.Add_Products .form_card .form_card-body p {
+  font-size: 1.2rem;
+  color: blue;
+  padding-top: 1rem;
+}
+.Add_Products .form_card .form_card-body .span_input span {
+  font-size: 1.5rem;
+}
+.Add_Products .form_card .form_card-body .span_input input {
+  font-size: 1.5rem;
+}
+.Add_Products .form_card .form_card-body a {
+  font-size: 1.5rem;
+}
+
+.Stock_out_products {
+  padding: 0 2.7rem;
+}
+.Stock_out_products .Stock_out_heading {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.Stock_out_products .Stock_out_heading .form_card .form_card-body {
+  display: flex;
+  flex-direction: column;
+}
+.Stock_out_products .Stock_out_heading .form_card .form_card-body h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.Stock_out_products .Stock_out_products_Show {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries form .Form_left label:first-child {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries form .Form_left label:last-child {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries form .Form_left select {
+  font-size: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries form .Form_Right label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries form .Form_Right input {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries_show {
+  padding-top: 2rem;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries_show table thead tr th {
+  font-size: 1.6rem;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries_show table tbody tr .col_image .image_declared {
+  margin: auto;
+  width: 5rem;
+  height: 5rem;
+  border: 0.1rem solid grey;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries_show table tbody tr .col_image .image_declared img {
+  width: 100%;
+  height: 100%;
+}
+.Stock_out_products .Stock_out_products_Show .Stock_out_products_entries_show table tbody tr .table_content {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.order_heading {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.order_heading .order_heading_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.order_heading .order_heading_content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.order_heading .order_heading_content a {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: white;
+}
+
+.All_order_details {
+  padding: 0 2rem;
+}
+
+.order_Show {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+}
+.order_Show .order_entries form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order_Show .order_entries form .Form_left label:first-child {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.order_Show .order_entries form .Form_left label:last-child {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.order_Show .order_entries form .Form_left select {
+  font-size: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.order_Show .order_entries form .Form_Right label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.order_Show .order_entries form .Form_Right input {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.order_Show .order_entries_show {
+  padding-top: 2rem;
+}
+.order_Show .order_entries_show table thead tr th {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+.order_Show .order_entries_show table tbody tr .table_content {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.order_Show .order_entries_show table tbody tr .table_btn {
+  display: flex;
+  flex-direction: row;
+}
+.order_Show .order_entries_show table tbody tr .table_btn .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-right: 2rem;
+  padding: 0.5rem 1rem;
+}
+.order_Show .order_entries_show table tbody tr .table_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.Order_heading {
+  margin-bottom: 2rem;
+}
+.Order_heading .Order_heading_row .Order_heading_col .Order_heading_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.Order_heading .Order_heading_row .Order_heading_col .Order_heading_body h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.Order_heading .Order_heading_row .Order_heading_col .Order_heading_body .Add_Order_btn {
+  display: flex;
+  flex-direction: row;
+}
+.Order_heading .Order_heading_row .Order_heading_col .Order_heading_body .Add_Order_btn button:first-child {
+  margin-right: 2rem;
+}
+.Order_heading .Order_heading_row .Order_heading_col .Order_heading_body .Add_Order_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.Order_Invoice_section {
+  padding: 0 2rem;
+}
+.Order_Invoice_section .Order_invoice_show {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .main_logo {
+  display: flex;
+  justify-content: center;
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .main_logo p {
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%);
+  padding: 0%;
+  border: 0.2rem solid rgba(255, 0, 0, 0.5);
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .order_details h4,
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .billing_address h4,
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .shipping_address h4 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .order_details p,
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .billing_address p,
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .shipping_address p {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .order_details p span,
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .billing_address p span,
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .shipping_address p span {
+  font-size: 1.3rem;
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .products_detail table thead tr th {
+  font-size: 1.8rem;
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .products_detail table tbody tr .col_image .image_declared {
+  width: 7rem;
+  height: 7rem;
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .products_detail table tbody tr .col_image .image_declared img {
+  width: 100%;
+  height: 100%;
+}
+.Order_Invoice_section .Order_invoice_show .Order_invoice_show_row .products_detail table tbody tr .table_content {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+@media print {
+  .col-lg-6,
+  .col-md-6 {
+    width: 50%;
+  }
+  .Order_invoice_show {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+  }
+  .Order_invoice_show .Order_invoice_show_row .main_logo {
+    display: flex;
+    justify-content: center;
+  }
+  .Order_invoice_show .Order_invoice_show_row .main_logo p {
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%) !important;
+    padding: 0%;
+    border: 0.2rem solid rgba(255, 0, 0, 0.5) !important;
+  }
+  .Order_invoice_show .Order_invoice_show_row .order_details h4,
+  .Order_invoice_show .Order_invoice_show_row .billing_address h4,
+  .Order_invoice_show .Order_invoice_show_row .shipping_address h4 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .Order_invoice_show .Order_invoice_show_row .order_details p,
+  .Order_invoice_show .Order_invoice_show_row .billing_address p,
+  .Order_invoice_show .Order_invoice_show_row .shipping_address p {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+  .Order_invoice_show .Order_invoice_show_row .order_details p span,
+  .Order_invoice_show .Order_invoice_show_row .billing_address p span,
+  .Order_invoice_show .Order_invoice_show_row .shipping_address p span {
+    font-size: 1.3rem;
+  }
+  .Order_invoice_show .Order_invoice_show_row .products_detail table thead tr th {
+    font-size: 1.8rem;
+  }
+  .Order_invoice_show .Order_invoice_show_row .products_detail table tbody tr .col_image .image_declared {
+    width: 7rem;
+    height: 7rem;
+  }
+  .Order_invoice_show .Order_invoice_show_row .products_detail table tbody tr .col_image .image_declared img {
+    width: 100%;
+    height: 100%;
+  }
+  .Order_invoice_show .Order_invoice_show_row .products_detail table tbody tr .table_content {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+}
+.All_pending_order_details {
+  padding: 0 2rem;
+}
+
+.All_delivered_order_details {
+  padding: 0 2rem;
+}
+
+.DB_Product_Category {
+  padding: 0 2rem;
+}
+
+.pagination_font {
+  font-size: 1.5rem;
+}
+
+.Product_category_delete button {
+  padding: 0.5rem 0.5rem;
+  font-size: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgba(255, 0, 0, 0.7);
+  border-radius: 0.5rem;
+}
+.Product_category_delete button:hover {
+  background: rgb(255, 0, 0);
+}
+
+.react-confirm-alert-body h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.react-confirm-alert-body p {
+  font-size: 1.8rem !important;
+}
+.react-confirm-alert-body button {
+  font-size: 1.8rem !important;
+  padding: 0.8rem 2.5rem !important;
+}
+
+.All_user_details {
+  padding: 0 2rem;
+}
+
+.user_Show {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+}
+.user_Show .user_entries form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user_Show .user_entries form .Form_left label:first-child {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.user_Show .user_entries form .Form_left label:last-child {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.user_Show .user_entries form .Form_left select {
+  font-size: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.user_Show .user_entries form .Form_Right label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.user_Show .user_entries form .Form_Right input {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.user_Show .user_entries_show {
+  padding-top: 2rem;
+}
+.user_Show .user_entries_show table thead tr th {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.user_Show .user_entries_show table tbody tr .table_content {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.user_Show .user_entries_show table tbody tr .table_content .button-container button,
+.user_Show .user_entries_show table tbody tr .table_content .button-container a {
+  line-height: 0;
+  font-size: 1.8rem !important;
+  padding: 0.5rem 0.8rem !important;
+}
+.user_Show .user_entries_show table tbody tr .table_content-permission {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.user_Show .user_entries_show table tbody tr .table_content-permission span {
+  font-size: 1.6rem;
+}
+
+.Role_update {
+  padding: 0 2rem;
+}
+.Role_update .role_show {
+  padding: 10rem 20rem;
+  background: white;
+  border-radius: 1rem;
+}
+.Role_update .role_show form .role-row {
+  row-gap: 2rem;
+}
+.Role_update .role_show form .role-row .role-col-main .role-name-group label {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #474748;
+}
+.Role_update .role_show form .role-row .role-col-main .role-name-group input {
+  font-size: 1.8rem;
+}
+.Role_update .role_show form .role-row .role-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Role_update .role_show form .role-row .role-col input {
+  font-size: 1.8rem;
+}
+.Role_update .role_show form .role-row .role-col label {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: #474748;
+}
+.Role_update .role_show form .role-row .role-col button {
+  padding: 0.5rem 2rem;
+  font-size: 1.8rem;
+}
+
+.All_SystemUser_details {
+  padding: 0 2rem;
+}
+.All_SystemUser_details .SystemUser_Show {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries form .Form_left label:first-child {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries form .Form_left label:last-child {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries form .Form_left select {
+  font-size: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries form .Form_Right label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries form .Form_Right input {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries_show {
+  padding-top: 2rem;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries_show table thead tr th {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries_show table tbody tr .table_content {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries_show table tbody tr .table_content .button-container button,
+.All_SystemUser_details .SystemUser_Show .SystemUser_entries_show table tbody tr .table_content .button-container a {
+  line-height: 0;
+  font-size: 1.8rem !important;
+  padding: 0.5rem 0.8rem !important;
+}
+
+.All_SystemUserUpdate_details {
+  padding: 0 2rem;
+}
+.All_SystemUserUpdate_details .SystemUserUpdate_Show {
+  padding: 5rem 10rem;
+  background: white;
+  border-radius: 1rem;
+}
+.All_SystemUserUpdate_details .SystemUserUpdate_Show form .input_group {
+  margin: auto;
+}
+.All_SystemUserUpdate_details .SystemUserUpdate_Show form .input_group label {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.All_SystemUserUpdate_details .SystemUserUpdate_Show form .input_group input {
+  font-size: 1.8rem;
+}
+.All_SystemUserUpdate_details .SystemUserUpdate_Show form .input_group select {
+  font-size: 1.8rem;
+}
+.All_SystemUserUpdate_details .SystemUserUpdate_Show form .input_group select option {
+  font-size: 1.8rem;
+}
+.All_SystemUserUpdate_details .SystemUserUpdate_Show form .btn-update {
+  margin: auto;
+}
+.All_SystemUserUpdate_details .SystemUserUpdate_Show form .btn-update button {
+  font-size: 1.8rem;
+}
+
+.All_OtherUser_details {
+  padding: 0 2rem;
+}
+.All_OtherUser_details .OtherUser_Show {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries form .Form_left label:first-child {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries form .Form_left label:last-child {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries form .Form_left select {
+  font-size: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries form .Form_Right label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries form .Form_Right input {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries_show {
+  padding-top: 2rem;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries_show table thead tr th {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries_show table tbody tr .table_content {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries_show table tbody tr .table_content .button-container button,
+.All_OtherUser_details .OtherUser_Show .OtherUser_entries_show table tbody tr .table_content .button-container a {
+  line-height: 0;
+  font-size: 1.8rem !important;
+  padding: 0.5rem 0.8rem !important;
+}
+
+.All_OtherUserUpdate_details {
+  padding: 0 2rem;
+}
+.All_OtherUserUpdate_details .OtherUserUpdate_Show {
+  padding: 5rem 10rem;
+  background: white;
+  border-radius: 1rem;
+}
+.All_OtherUserUpdate_details .OtherUserUpdate_Show form .input_group {
+  margin: auto;
+}
+.All_OtherUserUpdate_details .OtherUserUpdate_Show form .input_group label {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.All_OtherUserUpdate_details .OtherUserUpdate_Show form .input_group input {
+  font-size: 1.8rem;
+}
+.All_OtherUserUpdate_details .OtherUserUpdate_Show form .input_group select {
+  font-size: 1.8rem;
+}
+.All_OtherUserUpdate_details .OtherUserUpdate_Show form .input_group select option {
+  font-size: 1.8rem;
+}
+.All_OtherUserUpdate_details .OtherUserUpdate_Show form .btn-update {
+  margin: auto;
+}
+.All_OtherUserUpdate_details .OtherUserUpdate_Show form .btn-update button {
+  font-size: 1.8rem;
+}
+
+.toastBody {
+  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+}
+
+.send_Email {
+  padding: 0 2rem;
+}
+.send_Email .send_email_content {
+  padding: 5rem 10rem;
+  background: white;
+  border-radius: 1rem;
+}
+.send_Email .send_email_content form .send_email_content_show {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.send_Email .send_email_content form .send_email_content_show .email_content button {
+  font-size: 1.8rem;
+}
+.send_Email .send_email_content form .send_email_content_show .email_content .email_content-group label {
+  font-size: 1.8rem;
+}
+.send_Email .send_email_content form .send_email_content_show .email_content .email_content-group textarea,
+.send_Email .send_email_content form .send_email_content_show .email_content .email_content-group input {
+  font-size: 1.5rem;
+}
+
+.paymentSuccess {
+  padding: 5rem;
+  margin-bottom: 4rem;
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col .payment_card {
+  width: 45rem;
+  height: auto;
+  border-radius: 1rem;
+  border: 1px solid rgb(240, 232, 232);
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col .payment_card .card_header {
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: rgb(240, 232, 232);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col .payment_card .card_header h4 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: rgb(128, 123, 123);
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col .payment_card .card_header p {
+  font-size: 2rem;
+  text-transform: lowercase;
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col .payment_card .card_content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col .payment_card .card_content .succ_content {
+  font-size: 3.5rem;
+  color: #2f4f4f;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col .payment_card .card_footer {
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: rgb(240, 232, 232);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.paymentSuccess .container .paymentSuccess_row .paymentSuccess_col .payment_card .card_footer p {
+  font-size: 2rem;
+  color: gray;
+}
+
+.paymentCancel {
+  padding: 5rem;
+  margin-bottom: 4rem;
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col .payment_card {
+  width: 45rem;
+  height: auto;
+  border-radius: 1rem;
+  border: 1px solid rgb(240, 232, 232);
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col .payment_card .card_header {
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: rgb(240, 232, 232);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col .payment_card .card_header h4 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: rgb(128, 123, 123);
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col .payment_card .card_header p {
+  font-size: 2rem;
+  text-transform: lowercase;
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col .payment_card .card_content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col .payment_card .card_content .cancel_content {
+  font-size: 3.5rem;
+  color: #2f4f4f;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col .payment_card .card_footer {
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: rgb(240, 232, 232);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.paymentCancel .container .paymentCancel_row .paymentCancel_col .payment_card .card_footer p {
+  font-size: 2rem;
+  color: gray;
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+  .Product_Price_Range_Section input {
+    width: 100%;
+    height: 3rem;
+    color: blue;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .main_footer .main_footer_row {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .main_footer .main_footer_row .main_footer_col_1,
+  .main_footer .main_footer_row .main_footer_col_2,
+  .main_footer .main_footer_row .main_footer_col_3,
+  .main_footer .main_footer_row .main_footer_col_4 {
+    width: 50% !important;
+  }
+  .dashBoard_page_menu {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .dashBoard_Heading {
+    border-bottom: none !important;
+  }
+}
+@media screen and (max-width: 881px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media screen and (max-width: 726px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 35%;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 30%;
+  }
+  .container {
+    padding: 0 5rem;
+  }
+}
+@media screen and (max-width: 490px) {
+  html {
+    font-size: 25%;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+  .react-confirm-alert-overlay {
+    align-items: center !important;
+  }
+  .react-confirm-alert-body {
+    max-width: 70% !important;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 20%;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+  .trusted_col .swiper .swiper-slide {
+    padding-bottom: 5rem;
+  }
+  .react-confirm-alert-overlay {
+    align-items: center !important;
+  }
+  .react-confirm-alert-body {
+    max-width: 70% !important;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 15%;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+  .trusted_col .swiper .swiper-slide {
+    padding-bottom: 8rem;
+  }
+  .react-confirm-alert-overlay {
+    align-items: center !important;
+  }
+  .react-confirm-alert-body {
+    max-width: 50% !important;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 240px) {
+  html {
+    font-size: 10%;
+  }
+  .container {
+    padding: 0 5rem;
+  }
+  .react-confirm-alert-overlay {
+    align-items: center !important;
+  }
+  .react-confirm-alert-body {
+    max-width: 50% !important;
+    margin: auto;
+  }
+  .Toastify__toast-body {
+    font-size: 7rem; /* Adjust the font size as needed */
+  }
+  .Toastify__toast-container {
+    width: 90%; /* Adjust the width as needed */
+  }
+  .Toastify__toast {
+    padding: 10px; /* Adjust the padding as needed */
+  }
+}/*# sourceMappingURL=index.css.map */
